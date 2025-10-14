@@ -86,6 +86,7 @@
     let index = 0;
     //indexは0、配列questionsの添字に当てはめる。
     //問題表示部分に配列
+    let score = 0;
     questionElem.textContent = questions[index];
 
 </script>
@@ -123,8 +124,37 @@
         questionElem.textContent = questions[index];
         answerInput.value = ''; //初期化
 
+        if (index === questionElem.length) {
+            questionElem.textContent = '3門中' + score + '問正解です。';
+            console.log(score);
+        }
+
         console.log(answer);
     })
+</script>
+
+<script>
+    //文字列の連結練習
+    //文字列と数値型の連結
+    console.log('円周率は' + 3.14 + 'です。');
+    //円周率は、3.14です。
+    //文字列と数値の計算
+    console.log('計算結果:' + 1234 + 5678);
+    //計算結果：12345678 文字列が入った時点（最初）で文字列結合になる。
+
+    //数値の計算と文字列
+    console.log(123 + 456 + 'です。');
+    //579です。*文字列が入った時点（歳後）で文字列結合になる。
+
+    //文字列と（計算）だったら
+    console.log('計算結果：' + (123 + 456));
+    //計算結果：579
+
+    //文字列 - 数値だったら
+    console.log('2' - 1);
+    console.log('2' * 1);
+    console.log('2' / 2);
+    //1
 </script>
 <script>
     //if文
