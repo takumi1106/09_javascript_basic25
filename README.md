@@ -54,3 +54,25 @@ const '変数' = 8000;
         console.log('表記する文字列');
     }
 '''
+
+### 10月21日
+
+###　変数のキーワード
+
+- 繰り返し文(for文)
+
+- 様々な変数に使えるオブジェクト(window)
+
+### for文
+
+'''
+
+const images = ['image1', 'image2', 'image3', 'image4', 'image5'];
+
+for (let i = 0; i < images.length; i++) {
+                setTimeout(function () {
+                    images[i].classList.add('show');
+                };
+                // imagesのリスト分だけ繰り返される
+
+'''
