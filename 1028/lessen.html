@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習1028</title>
+</head>
+
+<body>
+    <script>
+        console.log(Math.PI);
+        console.log(Math.floor(Math.random()) * 20);//0~19 切り捨てなので
+        console.log(Math.floor(Math.random()) * 20 + 1);//0~20
+        console.log(Math.floor(Math.random()) * (20 - 8 + 1) + 8);//最大13にしてから、8足してるので、0+8=8, 12+8=20 最小8~最大20
+
+        console.log(Math.round(1.4));//四捨五入
+        console.log(Math.round(1.5));//四捨五入
+        console.log(Math.floor(10.3));//切り捨て
+        console.log(Math.ceil(10.3))//切り上げ
+
+        //関数を定義
+        function hello() {
+            console.log('こんにちは');
+        }
+
+        //関数を定義しただけでは、動かない。
+        //関数を呼び出す
+        //関数名()
+        hello();//関数を呼び出す
+        hello();//何度でも呼び出すことができる
+    </script>
+</body>
+
+</html>

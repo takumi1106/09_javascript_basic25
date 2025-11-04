@@ -76,3 +76,5 @@ for (let i = 0; i < images.length; i++) {
                 // imagesのリスト分だけ繰り返される
 
 '''
+
+### 10月28日
