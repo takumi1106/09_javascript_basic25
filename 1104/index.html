@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*.doctitleっていうのがCSSセレクター*/
+    /* スペースの意味は子孫セレクター */
+    .doctitle span {
+        color: #ff0000;
+    }
+
+    li {
+        color: blue;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .orange {
+        color: orange;
+    }
+</style>
+
+<body>
+    <h1 class="doctitle"><span>1</span>タイトルです</h1>
+    <h2>サブタイトル</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="orange">5</li>
+    </ul>
+    <button>色を変える</button>
+    <script>
+        //要素の取得（document.querySelector(CSSセレクター)）
+        //クラスは.,idは#,[type]属性セレクタ
+        document.querySelector('.doctitle span');
+        //もしくはdocument.querySelector('h1');
+
+        //変数への代入（const 変数名 = 代入するもの）
+        //なんでも変数に入れる
+        const title = document.querySelector('.doctitle span');
+        const num = 0;
+        console.log(title);
+        console.log(num);
+
+        //         変数constとletの使い分け
+        const text = 'コンスト';
+        //text = 'レット';//再代入できない
+        let text2 = 'レット';
+        text2 = 'レット２'//再宣言できないが、再代入はできる
+
+        //     クリックイベント（取得した要素.addEventListener('click', function () { 処理 });
+        title.addEventListener('click', function () {
+            alert('スパン');
+        });
+        //サブタイトルをクリックしたら、アラートでサブタイトルが出るようにする
+        const subtitle = document.querySelector('h2');
+        console.log(subtitle);
+        subtitle.addEventListener('click', function () {
+            alert('サブタイトル');
+        });
+
+        //     複数要素の取得（document.querySelectorAll(CSSセレクター);
+        const lists = document.querySelectorAll('li');
+        console.log(lists);
+        //Nodelist = 配列っぽいもの = インデックス・添字（0から始まる数値）
+
+        //     配列の添字（インデックス）・添字での取得
+        console.log(lists[2]);
+        console.log(lists[4]);
+
+        //     if文（条件分岐）の条件式の書き方
+        let number = 3;
+        if (number === 1) {
+            console.log('1です');
+        } else if (number === 2) {
+            console.log('2です');
+        } else {
+            console.log('それ以外です');
+        }
+        //配列の要素数を使った、for文
+        const animals = ['犬', '猫', 'リス', 'サメ'];
+        console.log(animals[1]);
+        for (let i = 0; i < animals.length; i++) {
+            console.log(animals[i]);
+        };
+
+        //listsをループさせる
+        //配列の要素数.length
+        for (let i = 0; i < lists.length; i++) {
+            console.log(lists[i]);
+        }
+
+        //クラス属性の追加・削除（classList.add(クラス名)、classList.remove(クラス名)
+
+        // lists[1].classList.add('green');
+        // lists[4].classList.remove('orange');
+
+        //関数の定義と、関数の呼び出し（実行）
+        function changeColor() {
+            lists[1].classList.add('green');
+            lists[4].classList.remove('orange');
+        }
+        //関数の実行
+        // changeColor();
+        const colorBtn = document.querySelector('button');
+        colorBtn.addEventListener('click', function () {
+            changeColor();
+        });
+    </script>
+</body>
+
+</html>
