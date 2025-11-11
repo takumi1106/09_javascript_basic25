@@ -91,3 +91,55 @@ function 関数名(){
 関数名
 
 '''
+
+### 11月11日
+
+- スクロール
+
+'''
+
+window.addEventListener('scroll', function () {
+})
+
+'''
+
+###　色
+
+- 色の制作
+
+'''
+
+const settingColors = [
+    { r: 255, g: 0, b: 0 },
+    { r: 0, g: 255, b: 0 },
+    { r: 0, g: 0, b: 255 },
+    { r: 255, g: 255, b: 0 }
+];
+
+'''
+
+- 背景色変更
+
+'''
+
+const 変数名 = document.body;
+変数名.style.backgroundColor = 'rgb(' + settingColors[0].r +
+    ',' + settingColors[0].g + ',' + settingColors[0].b + ')';
+
+'''
+
+### オブジェクト
+
+- 定義
+
+{プロパティ名：プロパティ値,プロパティ名：プロパティ値,...}
+※連想配列、ハッシュなどともいうが、区別するためJavaScriptではオブジェクトという。
+
+'''
+
+const fruits = { apple: 'りんご', mikan: 'みかん', strawbery: 'いちご' };
+
+cosole.log(fruits.apple);//ドット表記法
+cosole.log(fruits['apple']);//ブラケット表記法
+
+'''
